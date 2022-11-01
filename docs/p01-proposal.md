@@ -1,14 +1,6 @@
-# Title of your Project: Project Proposal
-
-**TODO**: Edit this file. Your project proposal goes here.
-
-For what to do, see the [`../instructions/`](../instructions/) directory, specifically:
-
-* [Design Brief](../instructions/project-design-brief.pdf)
-* [Project Proposal Requirements](../instructions/p01-proposal-requirements.md)
-
 # Gun Violence in the United States: Project Proposal
 
+**Project Code Name:** De FAB  
 **Author:** Delaney Wu (delaneyw@uw.edu),  Bich Ngoc (Jada) Nguyen (bndn13@uw.edu), Felix Ung (felixung@uw.edu), Anna Voloshina (aev01@uw.edu)
 
 INFO-201: Technical Foundations of Informatics  
@@ -73,4 +65,4 @@ Some limitations we might face in this project concerns the data that we use. Ou
 - “Gun Violence, Prevention of (Position Paper).” AAFP, 12 Dec. 2019, https://www.aafp.org/about/policies/all/gun-violence.html.
 - Redd, Kandace. “Gun Violence Disproportionately Impacts People of Color: Guns and Race.” abc10, 19 Nov. 2021, https://www.abc10.com/article/news/community/race-and-culture/how-gun-violence-is-a-racial-justice-issue/103-a6fbca38-b3c6-4c56-a239-e428c71d0d24.
 - Introduction to Gun Violence, OJJDP, https://ojjdp.ojp.gov/sites/g/files/xyckuh176/files/pubs/gun_violence/intro.html.
-- “Everytown Research - Data and Sources.” EveryStat.org, https://everystat.org/methodology. 
+- “Everytown Research - Data and Sources.” EveryStat.org, https://everystat.org/methodology.
