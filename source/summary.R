@@ -1,3 +1,3 @@
 library(dplyr)
-demographics <- read.csv("C:/Users/delan/Documents/info201/project/project-wudel22/data/demographics.csv")
+demographics <- read.csv("https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/demographics.csv")
 View(demographics)
