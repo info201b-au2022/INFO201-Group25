@@ -18,4 +18,4 @@ state_bar_chart <- state_deaths %>%
   geom_bar(stat = "identity", fill = "navy blue") +
   ylim(0, 6000) +
   ggtitle("State Chart")
-state_histogram
+state_bar_chart
