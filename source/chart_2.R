@@ -9,10 +9,14 @@ geographics <- read.csv("https://raw.githubusercontent.com/info201b-au2022/INFO2
 View(geographics)
 
 #pull the deaths for each city/county into a table
-city_total_deaths <- geographics %>%
-  group_by(city_or_county) %>%
-  summarize(total_city_deaths = sum(n_killed))
-View(city_total_deaths)
+df <- data.frame("city" = geographics$city_or_county, "state" = geographics$state, "deaths" = geographics$n_killed)  
+df <- unite(df, "location", city:state, sep = ", " , na.rm = TRUE, remove = FALSE)
+View(df)
+
+city <- df %>%
+  group_by(location) %>%
+  summarize(cityDeaths = sum(deaths))
+View(city)
 
 #create state chart
 city_death_by_state_chart <- 
