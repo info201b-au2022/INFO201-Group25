@@ -9,12 +9,12 @@ University of Washington
 Autumn 2022
 
 ## Abstract
-Our main question is: “How is gun violence distributed throughout the United States?” This question is important because it allows us to see what locations are most affected by gun violence. To address this question, we will compare the deaths of individuals in different states, counties, and the overall trend throughout the years.
+Our main question is: “How is gun violence distributed throughout the United States?” This question is important because it allows us to see what locations are most affected by gun violence. To address this question, we will compare the deaths of individuals in different states, cities, and the overall trend throughout the years.
 
 **Keywords:** Gun Violence, locations, trend
 
 ## Introduction
-In this project, we will examine the distribution of gun violence – including “homicide, violent crime, attempted suicide, suicide, and unintentional death and injury” (AAFP, 2018) across the United States geographically in terms of state, county, and date. Gun violence threatens the health and safety of all Americans: “Every day in the United States, 93 people die from gunshot wounds and an additional 240 sustain gunshot injuries”. Therefore, this is an extremely important issue to all Americans, and so, through this project, we hope to break things down to better understand which locations within the US are more severely affected by gun violence. There is no solution to this problem yet, so we would like to shed some light on the severity of the gun violence situation within the US.
+In this project, we will examine the distribution of gun violence – including “homicide, violent crime, attempted suicide, suicide, and unintentional death and injury” (AAFP, 2018) across the United States geographically in terms of state, city, and date. Gun violence threatens the health and safety of all Americans: “Every day in the United States, 93 people die from gunshot wounds and an additional 240 sustain gunshot injuries”. Therefore, this is an extremely important issue to all Americans, and so, through this project, we hope to break things down to better understand which locations within the US are more severely affected by gun violence. There is no solution to this problem yet, so we would like to shed some light on the severity of the gun violence situation within the US.
 
 ## Problem Domain
 ### Project Framing
@@ -35,18 +35,18 @@ Through the visualization and analysis of gun violence data, we can inform and e
 
   Through the question and dataset, we are trying to find out which states are more prone to gun violence. This question is important because it allows us to see which states encounter more violence. Using this data, the government would be able to hone in on certain states in an effort to lower the number of deaths in that state caused by gun violence. By analyzing and interpreting the information produced by this data, people can have a better understanding and be able to gauge the safety of each state. In addition, this analysis and data can aid other research and studies related to gun violence. One way that the analysis of gun violence in each state can aid research progress is by correlating it with gun laws and deaths within a state. For example, studies have shown that the stricter the gun laws, the lower the gun deaths within the state, while the weaker the gun laws, the higher the number of gun deaths. According to CNN news, Mississippi currently leads the US with the weakest gun laws and the highest gun deaths (Tucker, 2022).
 
-- How is gun violence distributed across all the counties of all the states?
+- How is gun violence distributed across all the cities of all the states?
 
-  Through the question and dataset, we are trying to find out which counties are more prone to gun violence. This question is important because it allows us to see which counties encounter more violence. Using this data, the local state government would be able to hone in on certain counties in an effort to lower the number of deaths in that county caused by gun violence and create more localized policies aimed to address the issue. By analyzing the information produced by this data, people can have a better understanding about the frequency of gun violence in their area and pursue measures that can keep them and their local community safe. Similar to how data about gun violence in states can be used to aid research, analysis about gun violence in counties can result in studies such as those reported by backgroundchecks.org. It reports that the county that has the highest mortality rate due to gun violence is St. Louis city, MO, with Hinds County, MS hot on its tail.
+  Through the question and dataset, we are trying to find out which cities are more prone to gun violence. This question is important because it allows us to see which cities encounter more violence. Using this data, the local state government would be able to hone in on certain cities in an effort to lower the number of deaths in that city caused by gun violence and create more localized policies aimed to address the issue. By analyzing the information produced by this data, people can have a better understanding about the frequency of gun violence in their area and pursue measures that can keep them and their local community safe. Similar to how data about gun violence in states can be used to aid research, analysis about gun violence in cities can result in studies such as those reported by backgroundchecks.org. It reports that the city that has the highest mortality rate due to gun violence is St. Louis city, MO, with Hinds County, MS hot on its tail.
 
 - How has gun violence changed over time? Has it increased or decreased? Does a certain area in the US have an increase or decrease in gun violence? Is there a trend in gun violence over time?
 
-  Through this question, we would like to find the trend of gun violence deaths over the years in different regions within the US. This is important because it allows us to see in what direction the US is heading. Depending on the trend shown through our analysis, we would be able to shed light on the severity of the gun violence situation and potentially the overall direction gun violence is moving in. 
+  Through this question, we would like to find the trend of gun violence deaths over the years in different regions within the US. This is important because it allows us to see in what direction the US is heading. Depending on the trend shown through our analysis, we would be able to shed light on the severity of the gun violence situation and potentially the overall direction gun violence is moving in.
 
 ## The Dataset
-The data set we chose shows the different geographic location of gun violence incidents by types such as by state, by county, and even by congressional district. Through these variables, we can identify regions where gun violence incidents of gun violence have occurred the most between 2013 and 2018. It also allows us to see how the frequency of gun violence changes over time in different areas using the dates provided by the data table.
+The data set we chose shows the different geographic location of gun violence incidents by types such as by state, by city, and even by congressional district. Through these variables, we can identify regions where gun violence incidents of gun violence have occurred the most between 2013 and 2018. It also allows us to see how the frequency of gun violence changes over time in different areas using the dates provided by the data table.
 
-Include a table that presents the name of each data file, the number of observations (rows), and the number of variables (columns).
+![Table of dataset](Table.png "Table")
 
 Ko, James. “Gun Violence Data.” Kaggle, 15 Apr. 2018, https://www.kaggle.com/datasets/jameslko/gun-violence-data?resource=download
 
@@ -63,10 +63,6 @@ Some limitations we might face in this project concerns the data that we use. Ou
 ## References
 - Ko, James. “Gun Violence Data.” Kaggle, 15 Apr. 2018, https://www.kaggle.com/datasets/jameslko/gun-violence-data?resource=download
 - “Gun Violence, Prevention of (Position Paper).” AAFP, 12 Dec. 2019, https://www.aafp.org/about/policies/all/gun-violence.html.
-
-
-
-
 - Lawrence, H. (2022, March 29). Toxic masculinity and gender-based Gun Violence in America: A way forward. SSRN. Retrieved October 31, 2022, from https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4032043
 - Woodcome, Tricia, et al. “Gun Violence Disproportionately and Overwhelmingly Hurts Communities of Color.” Center for American Progress, 3 June 2022, https://www.americanprogress.org/article/gun-violence-disproportionately-and-overwhelmingly-hurts-communities-of-color/.
 - Rowlands, DW, and Hanna Love. “Mapping Gun Violence: A Closer Look at the Intersection between Place and Gun Homicides in Four Cities.” Brookings, Brookings, 21 Apr. 2022, https://www.brookings.edu/2022/04/21/mapping-gun-violence-a-closer-look-at-the-intersection-between-place-and-gun-homicides-in-four-cities/.
