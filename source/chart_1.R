@@ -13,9 +13,10 @@ View(state_deaths)
 
 # Create histogram displaying the deaths in each state
 state_bar_chart <- state_deaths %>%
-  # filter(state == "Washington") %>%
+  #filter(state == "Washington") %>%
   ggplot(aes(x = state, y = total_state_deaths)) +
   geom_bar(stat = "identity", fill = "navy blue") +
-  ylim(0, 6000) +
+  ylim(0, 6000) + 
   ggtitle("State Chart")
 state_bar_chart
+
