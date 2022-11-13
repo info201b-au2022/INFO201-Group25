@@ -21,6 +21,7 @@ View(date)
 mainStates<- map_data("state")
 View(mainStates)
 mergedStates <- inner_join(mainStates, date, by = "region")
+View(mergedStates)
 
 p <- ggplot() +
   geom_polygon( 
