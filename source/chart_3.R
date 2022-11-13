@@ -10,12 +10,11 @@ geographics <- read.csv("https://raw.githubusercontent.com/info201b-au2022/INFO2
 View(geographics)
 
 #pull the deaths for date into a table
-df2 <- data.frame("date" = geographics$date, "deaths" = geographics$n_killed)
+df2 <- data.frame("date" = geographics$date, "deaths" = geographics$n_killed, "region" = geographics$state)
 View(df2)
 
 date <- df2 %>%
-  group_by(date) %>%
-  summarize(totalDeaths = sum(deaths))
+  group_by(date) 
 View(date)
 
 #Create US map that shows deaths
