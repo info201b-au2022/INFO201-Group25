@@ -3,8 +3,6 @@ library(ggplot2)
 library(dplyr)
 library(maps)
 
-StatePopulation <- read.csv("https://raw.githubusercontent.com/ds4stats/r-tutorials/master/intro-maps/data/StatePopulation.csv")
-View(StatePopulation)
 #Read in the geographics csv dataset
 geographics <- read.csv("https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/geographics.csv")
 View(geographics)
@@ -18,14 +16,14 @@ date <- df2 %>%
 View(date)
 
 #Create US map that shows deaths
-mainStates<- map_data("state")
-View(mainStates)
-mergedStates <- inner_join(mainStates, date, by = "region")
-View(mergedStates)
+# mainStates<- map_data("state")
+# View(mainStates)
+# mergedStates <- inner_join(mainStates, date, by = "region")
+# View(mergedStates)
 
 p <- ggplot() +
   geom_polygon( 
-    data = mergedStates,
+    data = mainStates,
     aes(x = long, y= lat, group = group, fill = totalDeaths),
     fill = "black",
     color = "white",
