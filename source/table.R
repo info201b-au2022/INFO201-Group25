@@ -34,7 +34,3 @@ date <- df2 %>%
   summarize(totalDeaths = sum(deaths))
 View(date)
 
-# date[order(as.Date(date$date, format="%m/%d/%Y")),]
-
-#date %>% arrange(mdy(data$date))
-date %>% order(as.Date(date$date, format="%m/%d/%Y"))
