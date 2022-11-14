@@ -23,9 +23,9 @@ city_death_by_state_chart <-
   plot_usmap(
     include = c("WA"),
     fill = "light blue") +
-  # geom_point(#data = city_total_deaths,
-  #            aes(x = long, y = lat),
-  #            color = "gold") +
+  geom_point(data = city_total_deaths,
+             aes(x = long, y = lat),
+             color = "gold") +
   labs(title = "Gun Violence distribution by Cities in different States")
 city_death_by_state_chart
 
@@ -34,14 +34,6 @@ map1 <- ggplot(city, aes( x = city , y = deaths, group=group)) +
   geom_polygon(aes(fill = df), color = "black")
 map1
 
-ggplot(df , BOD,
-       mapping = aes(x = city,
-                     y = deaths))
-
-install.packages("sf")
-library(sf)
-usa_1 <- ggplot(data = df) + 
-  geom_sf()
 
 
 library(ggplot2)
@@ -66,4 +58,5 @@ View(mapdata1)
 map_1 <- ggplot(usa_city, aes( x = long , y = lat, group=group)) + 
   geom_polygon(aes(fill = cityDeaths), color = "black")
 map_1
+
 
