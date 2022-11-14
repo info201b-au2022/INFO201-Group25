@@ -57,7 +57,7 @@ View(mapdata1)
 
 
 map_1 <- ggplot(usa_city, aes( x = long , y = lat, group=group)) + 
-  geom_polygon(aes(fill = cityDeaths)), color = "black")
+  geom_polygon(aes(fill = cityDeaths), color = "black")
 map_1
 
 
