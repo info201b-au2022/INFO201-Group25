@@ -8,7 +8,7 @@ View(geographics)
 #pull the deaths for each state into a table
 state_deaths <- geographics %>%
   group_by(state) %>%
-  summarise(total_state_deaths = sum(n_killed))
+  summarise(total_state_deaths = sum(n_killed)) 
 View(state_deaths)
 
 # Create histogram displaying the deaths in each state
