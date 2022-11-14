@@ -30,4 +30,40 @@ city_death_by_state_chart <-
 city_death_by_state_chart
 
 
+map1 <- ggplot(city, aes( x = city , y = deaths, group=group)) + 
+  geom_polygon(aes(fill = df), color = "black")
+map1
+
+ggplot(df , BOD,
+       mapping = aes(x = city,
+                     y = deaths))
+
+install.packages("sf")
+library(sf)
+usa_1 <- ggplot(data = df) + 
+  geom_sf()
+
+
+library(ggplot2)
+library(maps)
+library(mapdata)
+
+usa <- map_data('city')
+View(usa)
+
+
+
+install.packages("plyr")
+library(plyr)
+usa_city <- rbind.fill(usa, city)
+View(usa_city)
+
+mapdata1 <- usa_city %>% filter(!is.na(usa_city$location))
+View(mapdata1)
+
+
+
+map_1 <- ggplot(usa_city, aes( x = long , y = lat, group=group)) + 
+  geom_polygon(aes(fill = cityDeaths), color = "black")
+map_1
 
