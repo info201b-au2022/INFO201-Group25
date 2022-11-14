@@ -6,7 +6,7 @@ View(geographics)
 
 # Total Deaths from 2013 - 2018
 total_deaths <- sum(geographics$n_killed)
-print(totalDeaths)
+print(total_deaths)
 
 # State with total max death
 state_deaths <- geographics %>%
