@@ -38,14 +38,15 @@ map1
 
 library(ggplot2)
 library(maps)
+#install.packages("mapdata")
 library(mapdata)
 
-usa <- map_data('city')
+usa <- map_data('usa')
 View(usa)
 
 
 
-install.packages("plyr")
+#install.packages("plyr")
 library(plyr)
 usa_city <- rbind.fill(usa, city)
 View(usa_city)
@@ -56,7 +57,7 @@ View(mapdata1)
 
 
 map_1 <- ggplot(usa_city, aes( x = long , y = lat, group=group)) + 
-  geom_polygon(aes(fill = cityDeaths), color = "black")
+  geom_polygon(aes(fill = cityDeaths)), color = "black")
 map_1
 
 
