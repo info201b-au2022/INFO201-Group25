@@ -23,9 +23,9 @@ city_death_by_state_chart <-
   plot_usmap(
     include = c("WA"),
     fill = "light blue") +
-  geom_point(data = city_total_deaths,
-             aes(x = long, y = lat),
-             color = "gold") +
+  # geom_point(#data = city_total_deaths,
+  #            aes(x = long, y = lat),
+  #            color = "gold") +
   labs(title = "Gun Violence distribution by Cities in different States")
 city_death_by_state_chart
 
