@@ -1,36 +1,36 @@
 library(tidyverse)
 library(ggplot2)
-library(dplyr)
-library(maps)
 
-#Read in the geographics csv dataset
-geographics <- read.csv("https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/geographics.csv")
+# Load evictions data
+geographics <- read.csv("https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/geographics.csv") #%>%
 View(geographics)
 
-#pull the deaths for date into a table
-df2 <- data.frame("date" = geographics$date, "deaths" = geographics$n_killed, "state" = geographics$state, "latitude" = geographics$latitude, "longitude" = geographics$longitude)
-View(df2)
+year_col <- geographics %>%
+  mutate(year =  format(as.Date(date, format="%m/%d/%Y"),"%Y"))
+View(year_col)
 
-date <- df2 %>%
-  group_by(date) %>%
-  mutate(state = tolower(state))
-View(date)
+geo <- year_col %>%
+  filter(year == 2016) %>% # keep only 2016 data
+  mutate(state = tolower(state)) %>% # replace with lowercase for joining 
+  group_by(state) %>%
+  summarize(total_deaths_per_state = sum(n_killed))
+View(geo)
 
-#Create US map that shows deaths
-mainStates<- map_data("state")%>%
-  rename(state = region) %>%
-  left_join(date, by = "state")
-View(mainStates)
 
-p <- ggplot() +
-  geom_polygon( 
-    data = mainStates,
-    mapping = aes(x = long, y= lat, group = group, fill = deaths),
-    fill = "black",
-    color = "white",
-    size  = 0.1, 
+
+# Join eviction data to the U.S. shapefile
+state_shape <- map_data("state") %>% # load state shapefile
+  rename(state = region) %>% # rename for joining
+  left_join(geo, by="state") # join eviction data
+
+# Draw the map setting the `fill` of each state using its eviction rate
+ggplot(state_shape) +
+  geom_polygon(
+    mapping = aes(x = long, y = lat, group = group, fill = total_deaths_per_state),
+    color = "white", # show state outlines
+    size = .1        # thinly stroked
   ) +
-  coord_map()+ 
+  coord_map() + # use a map-based coordinate system
   scale_fill_continuous(low = "#132B43", high = "Red") +
   labs(fill = "Deaths") 
-p
+
