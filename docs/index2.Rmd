@@ -12,6 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 source("../source/summary.R")
 source("../source/table.R")
 source("../source/chart_1.R")
+source("../source/chart_3.R")
+source("../source/chart_5.R")
 ```
 
 ## Summary
@@ -27,13 +29,24 @@ kable(summary_table_verticle, format = "html") %>%
   kable_styling("striped", full_width = F, position = "center")  
 ```
 
-
-
 ## Charts
-### Visualization of Total Gun Violence Incidence (2013-2018)
+### Visualization of Total Gun Violence Incidence by State (2013-2018)
+
+The purpose of the chart below is to provide a visualized comparison of the amount deaths caused by gun violence across different state from 2013 to 2018. According to the chart California and Texas are the states with the most deaths caused by gun violence.
 
 ```{r chart_1, echo=FALSE}
 plot(state_bar_chart)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### Visualization of Total Gun Violence Incidence by City (2013-2018)
+```{r chart_5, echo=FALSE}
+death_distribution_by_city_in_washington
+```
+
+### Gun Violence Distribution by State in 2016
+
+The purpose of the chart below is to provide a visualization comparison of the amount deaths caused by gun violence across different state from 2013 to 2018. According to the chart California and Texas are the states with the most deaths caused by gun violence.
+
+```{r chart_3, echo=FALSE}
+plot(death_distribution_by_state_per_year)
+```

@@ -6,7 +6,7 @@ geographics <- read.csv("https://raw.githubusercontent.com/info201b-au2022/INFO2
 View(geographics)
 
 cities <- geographics %>%
-  filter(state == "California") %>%
+  filter(state == "Washington") %>%
   mutate(state = tolower(state)) %>% # replace with lowercase for joining 
   rename(lat = latitude) %>%
   rename(long = longitude)
@@ -27,3 +27,4 @@ death_distribution_by_city_in_washington <- leaflet(city_most_deaths) %>%
     fillOpacity = 0.5
   )
 death_distribution_by_city_in_washington
+
