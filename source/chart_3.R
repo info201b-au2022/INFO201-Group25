@@ -32,5 +32,6 @@ ggplot(state_shape) +
   ) +
   coord_map() + # use a map-based coordinate system
   scale_fill_continuous(low = "#132B43", high = "Red") +
-  labs(fill = "Deaths") 
+  labs(fill = "Deaths") +
+  ggtitle("State death distribution in 2016")
 
