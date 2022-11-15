@@ -10,11 +10,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## ACCESSING THE /source DIRECTORY
 ```{r, message=F, warning=F}
+source("../source/summary.R")
 source("../source/table.R")
 source("../source/chart_1.R")
 ```
 
 ## Summary
+The data set we found contain data collected from 2013 to 2018. During this time period, `r total_deaths`. 
 
 
 ## Table
