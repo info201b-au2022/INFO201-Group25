@@ -4,6 +4,10 @@ library(lubridate)
 geographics <- read.csv("https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/geographics.csv")
 View(geographics)
 
+# Number of Observations
+num_observations <- nrow(geographics)
+print(num_observations)
+
 # Total Deaths from 2013 - 2018
 total_deaths <- sum(geographics$n_killed)
 print(total_deaths)
@@ -93,17 +97,18 @@ print(min_date_deaths)
 
 
 
-summary_table <- data.frame(total_Deaths=c(total_deaths),
-                 state_Max_Total_Death=c(max_state_deaths),
-                 state_Min_Total_Death=c(min_state_deaths),
-                 city_Max_Total_Death=c(max_city_deaths),
-                 cities_Least_Total_Death=c(min_city_deaths),
-                 year_Max_Total_Death=c(max_year_deaths),
-                 year_Min_Total_Death=c(min_year_deaths),
-                 date_Max_Death=c(max_date_deaths),
-                 dates_Least_Total_Death=c(min_date_deaths))
+summary_table <- data.frame(num_observations=c(num_observations),
+                total_Deaths=c(total_deaths),
+                state_Max_Total_Death=c(max_state_deaths),
+               state_Min_Total_Death=c(min_state_deaths),
+               city_Max_Total_Death=c(max_city_deaths),
+               cities_Least_Total_Death=c(min_city_deaths),
+               year_Max_Total_Death=c(max_year_deaths),
+               year_Min_Total_Death=c(min_year_deaths),
+               date_Max_Death=c(max_date_deaths),
+               dates_Least_Total_Death=c(min_date_deaths))
 
-colnames(summary_table) = c("Total Deaths","State with Most Total Deaths","State with Least Total Deaths", "City with Most Total Deaths", "Cities with Least Total Deaths (0)", "Year with Most Deaths", "Year with Least Deaths", "Date with Most Deaths", "Dates with Lead Deaths (0)")
+colnames(summary_table) = c("Number of Observations","Total Deaths","State with Most Total Deaths","State with Least Total Deaths", "City with Most Total Deaths", "Cities with Least Total Deaths (0)", "Year with Most Deaths", "Year with Least Deaths", "Date with Most Deaths", "Dates with Lead Deaths (0)")
 
 summary_table_verticle <- as.data.frame(t(summary_table))
 View(summary_table_verticle)

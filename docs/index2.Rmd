@@ -8,19 +8,18 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## ACCESSING THE /source DIRECTORY
-```{r, message=F, warning=F}
+```{r, message=F, warning=F, include=F}
 source("../source/summary.R")
 source("../source/table.R")
 source("../source/chart_1.R")
 ```
 
 ## Summary
-The data set we found contain data collected from 2013 to 2018. During this time period, `r total_deaths`. 
+The data set we found contain data collected from 2017 to 2018. A total of `r num_observations` incidences were recorded during this time period. Of those incidences, a total of `r total_deaths` deaths were recorded as a result of gun violence. Across all the state within the United States (including District of Columbia), `r max_state_deaths` had the most total deaths and `r min_state_deaths` had the least total deaths within that time span. The city with the most deaths during the data collection process was `r max_city_deaths`. 
 
 
 ## Table
-### Table | Total Deaths in State
+### Table of Summary 
 ```{r table, echo=FALSE, message=F, warning=F}
 library(knitr)
 library(kableExtra)

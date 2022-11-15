@@ -3,6 +3,10 @@ library(tidyverse)
 geographics <- read.csv("https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/geographics.csv")
 View(geographics)
 
+# Number of Observations
+num_observations <- nrow(geographics)
+print(num_observations)
+
 
 # Total Deaths from 2013 - 2018
 total_deaths <- sum(geographics$n_killed)
