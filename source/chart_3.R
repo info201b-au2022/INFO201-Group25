@@ -8,26 +8,28 @@ geographics <- read.csv("https://raw.githubusercontent.com/info201b-au2022/INFO2
 View(geographics)
 
 #pull the deaths for date into a table
-df2 <- data.frame("date" = geographics$date, "deaths" = geographics$n_killed, "region" = geographics$state)
+df2 <- data.frame("date" = geographics$date, "deaths" = geographics$n_killed, "state" = geographics$state, "lat" = geographics$latitude, "long" = geographics$longitude)
 View(df2)
 
 date <- df2 %>%
-  group_by(date) 
+  group_by(date) %>%
+  mutate(state = tolower(state))
 View(date)
 
 #Create US map that shows deaths
-# mainStates<- map_data("state")
-# View(mainStates)
-# mergedStates <- inner_join(mainStates, date, by = "region")
-# View(mergedStates)
+mainStates<- map_data("state")%>%
+  rename(state = region) %>%
+  left_join(date, by = "state")
+View(mainStates)
 
 p <- ggplot() +
   geom_polygon( 
-    data = mainStates,
-    aes(x = long, y= lat, group = group, fill = totalDeaths),
+    mapping = aes(x = long.x, y= lat.y, group = group, fill = deaths),
     fill = "black",
     color = "white",
     size  = 0.1, 
   ) +
-  coord_map()
+  coord_map()+ 
+  scale_fill_continuous(low = "#132B43", high = "Red") +
+  labs(fill = "Deaths") 
 p
