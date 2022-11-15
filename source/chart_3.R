@@ -24,7 +24,7 @@ state_shape <- map_data("state") %>% # load state shapefile
   left_join(geo, by="state") # join eviction data
 
 # Draw the map setting the `fill` of each state using its eviction rate
-ggplot(state_shape) +
+death_distribution_by_state_per_year <- ggplot(state_shape) +
   geom_polygon(
     mapping = aes(x = long, y = lat, group = group, fill = total_deaths_per_state),
     color = "white", # show state outlines
