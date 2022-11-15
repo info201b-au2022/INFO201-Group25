@@ -8,7 +8,12 @@ View(geographics)
 
 #Filter to get the specific state user wants to look at
 cities <- geographics %>%
+<<<<<<< HEAD
   filter(state == "Washington") %>% 
+=======
+  filter(state == "Washington") %>%
+  mutate(state = tolower(state)) %>% # replace with lowercase for joining 
+>>>>>>> c002f5ee9965a84cdb6543362fa5e4134baad69f
   rename(lat = latitude) %>%
   rename(long = longitude)
 View(cities)
@@ -31,3 +36,4 @@ death_distribution_by_city_in_washington <-
     color = "Red"
   )
 death_distribution_by_city_in_washington
+
