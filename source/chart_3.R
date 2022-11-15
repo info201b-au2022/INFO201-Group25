@@ -31,7 +31,7 @@ death_distribution_by_state_per_year <- ggplot(state_shape) +
     size = .1        # thinly stroked
   ) +
   coord_map() + # use a map-based coordinate system
-  scale_fill_continuous(low = "#132B43", high = "Red") +
+  scale_fill_continuous(low = "Light Green", high = "Red") +
   labs(fill = "Deaths") +
   ggtitle("State death distribution in 2016")
-
+death_distribution_by_state_per_year
