@@ -8,7 +8,7 @@ geographics <- read.csv("https://raw.githubusercontent.com/info201b-au2022/INFO2
 View(geographics)
 
 #pull the deaths for date into a table
-df2 <- data.frame("date" = geographics$date, "deaths" = geographics$n_killed, "state" = geographics$state, "lat" = geographics$latitude, "long" = geographics$longitude)
+df2 <- data.frame("date" = geographics$date, "deaths" = geographics$n_killed, "state" = geographics$state, "latitude" = geographics$latitude, "longitude" = geographics$longitude)
 View(df2)
 
 date <- df2 %>%
@@ -24,7 +24,8 @@ View(mainStates)
 
 p <- ggplot() +
   geom_polygon( 
-    mapping = aes(x = long.x, y= lat.y, group = group, fill = deaths),
+    data = mainStates,
+    mapping = aes(x = long, y= lat, group = group, fill = deaths),
     fill = "black",
     color = "white",
     size  = 0.1, 
