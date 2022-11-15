@@ -17,6 +17,6 @@ state_bar_chart <- state_deaths %>%
   ggplot(aes(x = state, y = total_state_deaths)) +
   geom_bar(stat = "identity", fill = "navy blue") +
   ylim(0, 6000) + 
-  ggtitle("State Chart")
+  ggtitle("State Death Chart ")
 state_bar_chart
 
