@@ -1,5 +1,5 @@
 ---
-title: "Geographic Visualization of Gun Violence in the U.S."
+title: "Geographic Visualization of Gun Violence in the U.S. "
 author: "Bich Ngoc Nguyen, Felix Ung, Anna Voloshina, Delaney Wu"
 date: "1/12/2022"
 output: html_document
