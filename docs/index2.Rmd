@@ -12,16 +12,16 @@ knitr::opts_chunk$set(echo = TRUE)
 source("../source/summary.R")
 source("../source/table.R")
 source("../source/chart_1.R")
+source("../source/chart_2.R")
 source("../source/chart_3.R")
-source("../source/chart_5.R")
 ```
 
-## Summary
+## **Summary**
 The data set we found contain data collected from 2017 to 2018. A total of `r num_observations` incidences were recorded during this time period. Of those incidences, a total of `r total_deaths` deaths were recorded as a result of gun violence. Across all the state within the United States (including District of Columbia), `r max_state_deaths` had the most total deaths and `r min_state_deaths` had the least total deaths within that time span. The city with the most deaths during the data collection process was `r max_city_deaths`. 
 
 
-## Table
-### Table of Summary 
+## **Table**
+### **Table of Summary** 
 ```{r table, echo=FALSE, message=F, warning=F}
 library(knitr)
 library(kableExtra)
@@ -29,8 +29,8 @@ kable(summary_table_verticle, format = "html") %>%
   kable_styling("striped", full_width = F, position = "center")  
 ```
 
-## Charts
-### Visualization of Total Gun Violence Incidence by State (2013-2018)
+## **Charts**
+### **Visualization of Total Gun Violence Incidence by State (2013-2018)**
 
 The purpose of the chart below is to provide a visualized comparison of the amount deaths caused by gun violence across different state from 2013 to 2018. According to the chart California and Texas are the states with the most deaths caused by gun violence.
 
@@ -38,15 +38,24 @@ The purpose of the chart below is to provide a visualized comparison of the amou
 plot(state_bar_chart)
 ```
 
-### Visualization of Total Gun Violence Incidence by City (2013-2018)
-```{r chart_5, echo=FALSE}
+**note** In the final report, we'll attempt to make the map more interactive by letting user select multiple state of their choosing and only displaying those.
+
+### **Visualization of Total Gun Violence Incidence by City (2013-2018)**
+
+The map below displays an interactive map of a state and its cities with the corresponding deaths as a result of gun violence. One observation according to the map, is that gun violence incidences and gun deaths tend to appear in large cities and in close proximity to main highways and interstates.
+
+```{r chart_2, echo=FALSE}
 death_distribution_by_city_in_washington
 ```
 
-### Gun Violence Distribution by State in 2016
+**note** In the final report, we'll attempt to make the map more interactive by letting user select a state of their choosing and displaying the cities within it.
 
-The purpose of the chart below is to provide a visualization comparison of the amount deaths caused by gun violence across different state from 2013 to 2018. According to the chart California and Texas are the states with the most deaths caused by gun violence.
+### **Gun Violence Distribution by State in 2016**
+
+The map below shows the distribution of gun deaths across different states within the US in the year 2016. According to the map, California and Texas had the most gun deaths, followed by Illinois and Florida. Overall, the eastern United states seems to have more gun deaths compare to other regions like the north west.
 
 ```{r chart_3, echo=FALSE}
-plot(death_distribution_by_state_per_year)
-```
+plot(death_distribution_by_state_per_year)  
+```  
+
+**note** In the final report, we'll attempt to make the map more interactive by allowing user to change the time frame (2013-2018) by year and month.
