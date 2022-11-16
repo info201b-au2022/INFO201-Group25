@@ -1,4 +1,3 @@
-library(tidyverse)
 library(ggplot2)
 library(dplyr)
 #Read in the geographics csv dataset
@@ -15,7 +14,7 @@ View(state_deaths)
 state_bar_chart <- state_deaths %>%
   #filter(state == "Washington") %>%
   ggplot(aes(x = state, y = total_state_deaths)) +
-  geom_bar(stat = "identity", fill = "navy blue") +
+  geom_col(stat = "identity", fill = "navy blue") +
   ylim(0, 6000) + 
   ggtitle("State Death Chart ")
 state_bar_chart
