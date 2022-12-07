@@ -25,7 +25,14 @@ Chart1 <- tabPanel(
   "Chart 1",
   titlePanel("Comparison of Gun Violence Deaths between States"),
   sidebarLayout(
-    sidebarPanel(),
+    sidebarPanel(
+      fluidRow(
+        selectInput(id = "Country_1", 
+                    label = h3("Select Country"), 
+                    choices = state_deaths$state, 
+                    selected = 1)
+      )
+    ),
     mainPanel(
       #plotlyOutput("graph_line")
     )

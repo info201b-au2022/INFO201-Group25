@@ -9,20 +9,19 @@
 
 library(shiny)
 
+geographics <- read.csv("https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/geographics.csv")
+
 # Define server logic required to draw a histogram
 server <- shinyServer(function(input, output) {
-
-    # output$distPlot <- renderPlot({
-    # 
-    #     # generate bins based on input$bins from ui.R
-    #     x    <- faithful[, 2]
-    #     bins <- seq(min(x), max(x), length.out = input$bins + 1)
-    # 
-    #     # draw the histogram with the specified number of bins
-    #     hist(x, breaks = bins, col = 'darkgray', border = 'white',
-    #          xlab = 'Waiting time to next eruption (in mins)',
-    #          main = 'Histogram of waiting times')
-    # 
-    # })
+  output$chart1 <- renderPlot({
+    state_bar_chart <- ggplot(
+      data = state_deaths, 
+      aes(x = state, 
+          y = total_state_deaths)) +
+      geom_col(fill = "navy blue") +
+      ylim(0, 6000) + 
+      ggtitle("State Death Chart ")
+    return (state_bar_chart)
+  })
 
 })
