@@ -36,11 +36,10 @@ Chart1 <- tabPanel(
 Chart2 <- tabPanel(
   "Chart 2",
   titlePanel("Gun Violence Deaths by Cities"),
-  sidebarLayout(
-    sidebarPanel(),
-    mainPanel(
-      #plotlyOutput("graph_line")
-    )
+  selectInput(
+    inputId = "state_var",
+    label = "State Name",
+    choices = c("Gas", "Oil")
   )
 )
 
