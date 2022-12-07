@@ -131,10 +131,31 @@ Report <- tabPanel(
 )
 
 # All Tabs ----
-
-# Define a variable `ui` storing a `navbarPage()` element containing
 # your two pages defined above
 ui <- shinyUI(navbarPage(
+  header = tags$head(
+    # Note the wrapping of the string in HTML()
+    tags$style(HTML("
+      body {
+        background-color: #FFFCF6;
+        color: #071c21;
+      }
+      h2 {
+        font-weight: bold;
+        color: #0f3057;
+      }
+      h3 {
+      font-weight: bold;
+      color: #00587a;
+      }
+      .navbar-default {
+      background-color: #0f3057;
+      color: white;
+      }
+                    "
+      
+    ))
+  ),
   "CO2 Emissions",
   Introduction,
   Chart1, 
