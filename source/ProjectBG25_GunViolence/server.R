@@ -32,6 +32,7 @@ server <- shinyServer(function(input, output) {
       geom_col(fill = "#dd0a35") +
       labs(y = "Total State Deaths", x = "State") +
       geom_col(fill = "navy blue") +
+      geom_col(fill = "#dd0a35") +
       ylim(0, 6000) + 
       ggtitle("State Death Chart ")
     
@@ -90,6 +91,7 @@ server <- shinyServer(function(input, output) {
       scale_fill_continuous(low = "white", high = "#dd0a35") +
       labs(fill = "Deaths") +
       scale_fill_continuous(low = "Light Blue", high = "Navy") +
+      scale_fill_continuous(low = "White", high = "#dd0a35") +
       labs(fill = "Number of Deaths") +
       ggtitle("State death distribution in 2016")
     return(death_distribution_by_state_per_year)
