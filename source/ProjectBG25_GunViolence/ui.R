@@ -27,10 +27,13 @@ Chart1 <- tabPanel(
     ),
     mainPanel(
       plotOutput("chart1"),
+      h3("Analysis"),
+      tags$br(),
       p("Write chart 1 analysis paragraph here")
     )
   )
 )
+
 
 # Chart 2 ----
 Chart2 <- tabPanel(
@@ -49,6 +52,8 @@ Chart2 <- tabPanel(
     ),
     mainPanel(
       leafletOutput("chart2"),
+      h3("Analysis"),
+      tags$br(),
       p("Write chart 2 analysis paragraph here")
     )
   )
@@ -71,6 +76,8 @@ Chart3 <- tabPanel(
     ),
     mainPanel(
       plotOutput("chart3"),
+      h3("Analysis"),
+      tags$br(),
       p("Write chart 3 analysis paragraph here")
     )
   )
@@ -116,11 +123,11 @@ Report <- tabPanel(
   h2("Limitations"),
   p("Some limitations we might face in this project concerns the data that we use. Our data sets only span four years, from 2013-2018. This means that our data set might not reflect the most recent impact of gun violence in different regions in the United States. In addition, the data set might not include or account for every single gun violence incidence and therefore could make our analysis somewhat less accurate. Another way that our project might have limitations is that the data set only includes the 50 states in the United States and District of Columbia, which means that other U.S. territories will not be represented in our analysis. Without these data points, our analysis might create a skewed visualization of gun violence which in turn can affect how people interpret our data."),
   h2("Findings"),
-  p(""),
+  p("text here"),
   h2("Discussion"),
-  p(""),
+  p("text here"),
   h2("Conclusions"),
-  p(""),
+  p("text here"),
   h2("References"),
   tags$ul(
     tags$li("Ko, James. “Gun Violence Data.” Kaggle, 15 Apr. 2018, https://www.kaggle.com/datasets/jameslko/gun-violence-data?resource=download"),
@@ -154,6 +161,9 @@ ui <- shinyUI(navbarPage(
       .navbar-default {
       background-color: #0f3057;
       color: white;
+      }
+      .tab {
+      margin: 50%;
       }
                     "
       
