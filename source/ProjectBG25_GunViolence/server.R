@@ -22,7 +22,7 @@ server <- shinyServer(function(input, output) {
   output$chart1 <- renderPlot({
     
     state_data <- state_deaths %>% 
-      filter(state %in% input$Country_1, state %in% input$Country_2 )
+      filter(state %in% input$Country_1) 
     
     state_bar_chart <- ggplot(
       data = state_data, 
