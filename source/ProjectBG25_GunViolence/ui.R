@@ -7,7 +7,7 @@ Introduction <- tabPanel(
   "Introduction",
   titlePanel("Gun Violence in the United States"),
   p("In this project, we will examine the distribution of gun violence – including “homicide, violent crime, attempted suicide, suicide, and unintentional death and injury” (AAFP, 2018) across the United States geographically in terms of state, city, and date. Gun violence threatens the health and safety of all Americans: “Every day in the United States, 93 people die from gunshot wounds and an additional 240 sustain gunshot injuries”. Therefore, this is an extremely important issue to all Americans, and so, through this project, we hope to break things down to better understand which locations within the US are more severely affected by gun violence. There is no solution to this problem yet, so we would like to shed some light on the severity of the gun violence situation within the US." ),
-  img(src = '', align = 'left')
+  tags$img(src = '', align = 'left')
 )
 
 # Chart 1 ----
