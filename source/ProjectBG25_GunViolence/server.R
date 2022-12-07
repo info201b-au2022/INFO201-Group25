@@ -29,7 +29,7 @@ server <- shinyServer(function(input, output) {
       data = state_data, 
       aes(x = state, 
           y = total_state_deaths)) +
-      geom_col(fill = "navy blue") +
+      geom_col(fill = "#dd0a35") +
       ylim(0, 6000) + 
       ggtitle("State Death Chart ")
     
@@ -81,11 +81,11 @@ server <- shinyServer(function(input, output) {
     death_distribution_by_state_per_year <- ggplot(state_shape) +
       geom_polygon(
         mapping = aes(x = long, y = lat, group = group, fill = total_deaths_per_state),
-        color = "white", # show state outlines
+        color = "black", # show state outlines
         size = .1        # thinly stroked
       ) +
       coord_map() + # use a map-based coordinate system
-      scale_fill_continuous(low = "Light Blue", high = "Navy") +
+      scale_fill_continuous(low = "white", high = "#dd0a35") +
       labs(fill = "Deaths") +
       ggtitle("State death distribution in 2016")
     return(death_distribution_by_state_per_year)
