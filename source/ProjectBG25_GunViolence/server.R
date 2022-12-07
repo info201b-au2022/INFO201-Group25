@@ -60,5 +60,36 @@ server <- shinyServer(function(input, output) {
       )
     return(death_distribution_by_city_in_washington)
   })
+  
+  output$chart3 <- renderPlot({
+    
+    year_col <- geographics %>%
+      mutate(year =  format(as.Date(date, format="%m/%d/%Y"),"%Y"))
+    
+    geo <- year_col %>%
+      filter(year %in% input$year_var) %>% # filters by the year input
+      mutate(state = tolower(state)) %>% # replace with lowercase for joining 
+      group_by(state) %>%
+      summarize(total_deaths_per_state = sum(n_killed))
+    
+    # Join eviction data to the U.S. shapefile
+    state_shape <- map_data("state") %>% # load state shapefile
+      rename(state = region) %>% # rename for joining
+      left_join(geo, by="state") # join eviction data
+    
+    # Draw the map setting the `fill` of each state using its eviction rate
+    death_distribution_by_state_per_year <- ggplot(state_shape) +
+      geom_polygon(
+        mapping = aes(x = long, y = lat, group = group, fill = total_deaths_per_state),
+        color = "white", # show state outlines
+        size = .1        # thinly stroked
+      ) +
+      coord_map() + # use a map-based coordinate system
+      scale_fill_continuous(low = "Light Blue", high = "Navy") +
+      labs(fill = "Deaths") +
+      ggtitle("State death distribution in 2016")
+    return(death_distribution_by_state_per_year)
+    
+  })
 
 })
