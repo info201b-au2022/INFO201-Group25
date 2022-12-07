@@ -10,6 +10,7 @@
 library(shiny)
 library(dplyr)
 library(ggplot2)
+library(leaflet)
 
 geographics <- read.csv("https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/geographics.csv")
 
@@ -33,6 +34,31 @@ server <- shinyServer(function(input, output) {
       ggtitle("State Death Chart ")
     
     return (state_bar_chart)
+  })
+  
+  output$chart2 <- renderLeaflet({
+    
+    cities <- geographics %>%
+      filter(state %in% input$state_var) %>%
+      rename(lat = latitude) %>%
+      rename(long = longitude)
+    
+    city_most_deaths <- cities %>% 
+      mutate(radius = (n_killed/max(n_killed) * 3)^2)
+    
+    death_distribution_by_city_in_washington <- 
+      leaflet(city_most_deaths) %>% 
+      addTiles() %>%
+      addCircleMarkers(
+        lat = ~lat, 
+        lng = ~long,
+        popup = ~city_or_county, #the points are plotted on the city or county in the dataset
+        stroke = FALSE,
+        radius = ~radius, # based off the radius created previously by the number of deaths
+        fillOpacity = 0.5,
+        color = "Red"
+      )
+    return(death_distribution_by_city_in_washington)
   })
 
 })
