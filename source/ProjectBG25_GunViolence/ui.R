@@ -81,15 +81,27 @@ Report <- tabPanel(
   h2("Problem Domain"),
   h3("Problem Framing"),
   p("The problem domain in this project is gun violence. Gun violence has long been a social issue in the United States. It is experienced everywhere in the U.S. and “homicide increases” are “driven predominantly by increases in neighborhoods where gun violence has long been a persistent fixture of daily life, alongside systemic disinvestment, segregation, and economic inequality.” (Rowlands, 2022). By analyzing the data set, we aim to find the trend of gun violence geographically throughout the United States and over time."),
-  h3("Problem Framing"),
-  p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
+  h3("Human Values"),
+  p("Human values that are within and/or connected to gun violence are protection, self-defense, quality of life, and safety. Having access to guns is a right provided to people in the US for self-defense and protection. Yet some take advantage of these rights to cause harm to others which affects their quality of life and safety."),
+  h3("Stakeholders"),
   tags$ul(
-    tags$li(tags$strong("coal_co2: "), "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	"),
-    tags$li(tags$strong("gas_co2: "), "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
-    tags$li(tags$strong("oil_co2: "), "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	")
+    tags$li("The ", tags$strong("direct stakeholders"), " of this project are the people that are living in regions where gun violence incidents are most prone to happen.  "),
+    tags$li("The", tags$strong("indirect stakeholders"), "of this project are everyone who is not physically involved but have the risk of experiencing gun violence"),
   ),
-  h3("Analyzing the Trend"),
-  p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. " )
+  h3("Benefits & Harm"),
+  p(""),
+  h2("Research Questions"),
+  p(""),
+  h2("The Dataset"),
+  p(""),
+  h2("Expected Implications"),
+  p(""),
+  h2("Limitations"),
+  p(""),
+  h2("Conclusions"),
+  p(""),
+  h2("References"),
+  p(""),
 )
 
 # All Tabs ----
