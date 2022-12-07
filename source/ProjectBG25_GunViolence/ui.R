@@ -27,6 +27,7 @@ Chart1 <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       fluidRow(
+<<<<<<< HEAD
         selectInput(inputId = "Country_1", 
                     label = h3("Select Country"),
                     choices = state_deaths$state,
@@ -36,6 +37,12 @@ Chart1 <- tabPanel(
                      label = h3("Select Country"),
                      choices = state_deaths$state,
                      selected = "Alaska")
+=======
+        selectInput(id = "Country_1", 
+                    label = h3("Select Country"), 
+                    choices = state_deaths$state, 
+                    selected = Alabama)
+>>>>>>> 0a99a87855c1eb1423e690f40c4efed4701b74cc
       )
     ),
     mainPanel(
@@ -51,7 +58,8 @@ Chart2 <- tabPanel(
   selectInput(
     inputId = "state_var",
     label = "State Name",
-    choices = c("Gas", "Oil")
+    choices = state_deaths$state,
+    selected = "Alabama"
   )
 )
 
