@@ -60,11 +60,14 @@ Chart2 <- tabPanel(
 Chart3 <- tabPanel(
   "Chart 3",
   titlePanel("Distribution of Gun Violence Deaths by Year"),
-  sidebarLayout(
-    sidebarPanel(),
-    mainPanel(
-      #plotlyOutput("graph_line")
-    )
+  selectInput(
+    inputId = "year_var",
+    label = "Year Variable",
+    choices = list("2013", "2014", "2015", "2016", "2017", "2018"),
+    selected = "2013"
+  ),
+  mainPanel(
+    plotOutput("chart3")
   )
 )
 
