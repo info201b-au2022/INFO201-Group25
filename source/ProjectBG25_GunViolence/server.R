@@ -22,13 +22,14 @@ state_deaths <- geographics %>%
 server <- shinyServer(function(input, output) {
   output$chart1 <- renderPlot({
     
-    state_data <- state_deaths %>% 
+    state_data <- state_deaths %>%
       filter(state %in% input$Country_1) 
     
     state_bar_chart <- ggplot(
       data = state_data, 
       aes(x = state, 
           y = total_state_deaths)) +
+      labs(y = "Total State Deaths", x = "State") +
       geom_col(fill = "navy blue") +
       ylim(0, 6000) + 
       ggtitle("State Death Chart ")
@@ -86,7 +87,7 @@ server <- shinyServer(function(input, output) {
       ) +
       coord_map() + # use a map-based coordinate system
       scale_fill_continuous(low = "Light Blue", high = "Navy") +
-      labs(fill = "Deaths") +
+      labs(fill = "Number of Deaths") +
       ggtitle("State death distribution in 2016")
     return(death_distribution_by_state_per_year)
     

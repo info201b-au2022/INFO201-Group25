@@ -26,7 +26,8 @@ Chart1 <- tabPanel(
       )
     ),
     mainPanel(
-      plotOutput("chart1")
+      plotOutput("chart1"),
+      p("Write chart 1 analysis paragraph here")
     )
   )
 )
@@ -47,7 +48,8 @@ Chart2 <- tabPanel(
       )
     ),
     mainPanel(
-      leafletOutput("chart2")
+      leafletOutput("chart2"),
+      p("Write chart 2 analysis paragraph here")
     )
   )
 )
@@ -68,7 +70,8 @@ Chart3 <- tabPanel(
       )
     ),
     mainPanel(
-      plotOutput("chart3")
+      plotOutput("chart3"),
+      p("Write chart 3 analysis paragraph here")
     )
   )
 )
