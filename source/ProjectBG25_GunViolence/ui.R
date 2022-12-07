@@ -30,7 +30,7 @@ Chart1 <- tabPanel(
         selectInput(id = "Country_1", 
                     label = h3("Select Country"), 
                     choices = state_deaths$state, 
-                    selected = 1)
+                    selected = Alabama)
       )
     ),
     mainPanel(
@@ -46,7 +46,8 @@ Chart2 <- tabPanel(
   selectInput(
     inputId = "state_var",
     label = "State Name",
-    choices = c("Gas", "Oil")
+    choices = state_deaths$state,
+    selected = "Alabama"
   )
 )
 
