@@ -29,7 +29,7 @@ Chart1 <- tabPanel(
       plotOutput("chart1"),
       h3("Analysis"),
       tags$br(),
-      p("The chart above shows the distribution of gun violence between the U.S states. You may select however many states you would like at a time and the chart will pull up a bar for the state, or states you have chosen indicating the amount of gun violence it has. In order to analyze the effects of gun violence in the U.S, we have to breakdown specificaly where most of the violence comes from first to see what the patterns are. You can see by clicking through a few states that a lot of them share similar gun violence rates, some are low, but some are exceptionally high. If you try adding all the states at once to the chart you can see that there isn't really a skew in any direction instead it is pretty even, the data spikes up and down mostly, which shows that around the U.S gun violence is prevalent everywhere. ")
+      p("This data visualization demonstrates the gun violence deaths distribution between the different U.S. states from 2013 to 2018. The user is able to select multiple states and display them on the bar chart. This way, the user can compare the deaths by gun violence from any state(s) they desire. Allowing user to experiment with the data, enables them to select whichever state they desire, enables them to gain a better understanding of the data overall. While comparing states, user can compare which regions have a higher or lower deaths and evaluate whether certain locational factors lead to an increase or decrease in gun violence deaths.")
     )
   )
 )
@@ -54,7 +54,9 @@ Chart2 <- tabPanel(
       leafletOutput("chart2"),
       h3("Analysis"),
       tags$br(),
-      p("This chart goes even deeper by showing the spread of gun violence throughout the different cities within the states. You can select a state first, then you will see the state pullled up on the chart with the cities labeled out, you can also see that the exact locations where gun violence has happened is marked in red. This is to further analyze where this gun violence is taking place and what specific locations are at higher risk than others. This can help inform those who are in these areas to be more cautious of their environment so they are able to stay safe. ")
+      p("This data visulationation allows audience to gain insight into the general vulnerability of their geographic area to gun violence. By letting user interact with the map, they can develop a more personal interest and have a more in depth understanding of the geographic distribution of gun violence deaths in their local area."),
+      p("Overall trends reveal that large cities have more gun violence deaths than rural areas. Another pattern that can be analyze is that the red dots that displays the gun violence deaths often appear near interstate or highways. "),
+      p("This chart goes even deeper by showing the spread of gun violence throughout the different cities within the states. You can select a state first, then you will see the state pullled up on the chart with the cities labeled out, you can also see that the exact locations where gun violence has happened is marked in red. This is to further analyze where this gun violence is taking place and what specific locations are at higher risk than others. This can help inform those who are in these areas to be more cautious of their environment so they are able to stay safe.")
     )
   )
 )
