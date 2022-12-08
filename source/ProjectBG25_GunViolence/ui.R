@@ -29,7 +29,7 @@ Chart1 <- tabPanel(
       plotOutput("chart1"),
       h3("Analysis"),
       tags$br(),
-      p("Write chart 1 analysis paragraph here")
+      p("The chart above shows the distribution of gun violence between the U.S states. You may select however many states you would like at a time and the chart will pull up a bar for the state, or states you have chosen indicating the amount of gun violence it has. In order to analyze the effects of gun violence in the U.S, we have to breakdown specificaly where most of the violence comes from first to see what the patterns are. You can see by clicking through a few states that a lot of them share similar gun violence rates, some are low, but some are exceptionally high. If you try adding all the states at once to the chart you can see that there isn't really a skew in any direction instead it is pretty even, the data spikes up and down mostly, which shows that around the U.S gun violence is prevalent everywhere. ")
     )
   )
 )
@@ -54,7 +54,7 @@ Chart2 <- tabPanel(
       leafletOutput("chart2"),
       h3("Analysis"),
       tags$br(),
-      p("Write chart 2 analysis paragraph here")
+      p("This chart goes even deeper by showing the spread of gun violence throughout the different cities within the states. You can select a state first, then you will see the state pullled up on the chart with the cities labeled out, you can also see that the exact locations where gun violence has happened is marked in red. This is to further analyze where this gun violence is taking place and what specific locations are at higher risk than others. This can help inform those who are in these areas to be more cautious of their environment so they are able to stay safe. ")
     )
   )
 )
@@ -78,7 +78,7 @@ Chart3 <- tabPanel(
       plotOutput("chart3"),
       h3("Analysis"),
       tags$br(),
-      p("Write chart 3 analysis paragraph here")
+      p("This last chart shows the deaths from gun violence by year. You are able to select which year you want to take a look at and it will display the amount of deaths nationwide that are from gun violence. By looking at the charts you will be able to see that some years have been more deadly than others. This data allows more people to understand the sheer volume of lives we lose to gun violence every year. We can also use this to find patterns to why there is a rise in violence some years. ")
     )
   )
 )
