@@ -6,8 +6,22 @@ source("server.R")
 Introduction <- tabPanel(
   "Introduction",
   titlePanel("Gun Violence in the United States"),
+  h2("Introduction"),
   p("In this project, we will examine the distribution of gun violence – including “homicide, violent crime, attempted suicide, suicide, and unintentional death and injury” (AAFP, 2018) across the United States geographically in terms of state, city, and date. Gun violence threatens the health and safety of all Americans: “Every day in the United States, 93 people die from gunshot wounds and an additional 240 sustain gunshot injuries”. Therefore, this is an extremely important issue to all Americans, and so, through this project, we hope to break things down to better understand which locations within the US are more severely affected by gun violence. There is no solution to this problem yet, so we would like to shed some light on the severity of the gun violence situation within the US." ),
-  tags$img(src = 'https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/gun_violence_image_for_intro.jpg', align = 'center', width = '75%', height = 'auto' )
+  tags$img(src = "https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/gun_violence_image_for_intro.jpg",
+           style="display: block; margin-left: auto; margin-right: auto; width: 60%"),
+  h2("Problem Domain"),
+  p("The problem domain in this project is gun violence. Gun violence has long been a social issue in the United States. It is experienced everywhere in the U.S. and “homicide increases” are “driven predominantly by increases in neighborhoods where gun violence has long been a persistent fixture of daily life, alongside systemic disinvestment, segregation, and economic inequality.” (Rowlands, 2022). By analyzing the data set, we aim to find the trend of gun violence geographically throughout the United States and over time."),
+  h2("Research Questions"),
+  tags$ol(
+    tags$li("How does gun violence deaths compare between different states in the US?"),
+    tags$li("How is gun violence distributed across all the cities of all the states?"),
+    tags$li("How has gun violence changed over time? Has it increased or decreased? Does a certain area in the US have an increase or decrease in gun violence? Is there a trend in gun violence over time?")
+  ),
+  h2("Data Analyzed"),
+  p(""),
+  h2("Key Findings"),
+  p(""),
 )
 
 # Chart 1 ----
@@ -80,6 +94,8 @@ Chart3 <- tabPanel(
       plotOutput("chart3"),
       h3("Analysis"),
       tags$br(),
+      p("This data visualization demonstrates the geographic distribution of gun violence deaths across the different U.S. states. The user is able to select the year that they want to observe the trend for. This visualization allows user to gain insight into what general region in the US is most vulnerable to deaths by gun violence."),
+      tags$br(),
       p("This last chart shows the deaths from gun violence by year. You are able to select which year you want to take a look at and it will display the amount of deaths nationwide that are from gun violence. By looking at the charts you will be able to see that some years have been more deadly than others. This data allows more people to understand the sheer volume of lives we lose to gun violence every year. We can also use this to find patterns to why there is a rise in violence some years. ")
     )
   )
@@ -112,7 +128,7 @@ Report <- tabPanel(
   p("Through the visualization and analysis of gun violence data, we can inform and educate people about the consequences of ignorant and unlawful use of guns and firearms. By presenting these data to people living in regions and communities with frequent gun violence occurring, we can help provide them with information to better understand and minimize future incidences of gun violence. Allowing people to view the data for themselves can help reduce misconceptions that hinder our ability, as a nation, to develop effective gun violence prevention efforts."),
   h2("Research Questions"),
   tags$ul(
-    tags$li("How is gun violence distributed geographically across the states in the US?"),
+    tags$li("How does gun violence deaths compare between different states in the US?"),
     tags$br(),
     tags$p("Through the question and dataset, we are trying to find out which states are more prone to gun violence. This question is important because it allows us to see which states encounter more violence. Using this data, the government would be able to hone in on certain states in an effort to lower the number of deaths in that state caused by gun violence. By analyzing and interpreting the information produced by this data, people can have a better understanding and be able to gauge the safety of each state. In addition, this analysis and data can aid other research and studies related to gun violence. One way that the analysis of gun violence in each state can aid research progress is by correlating it with gun laws and deaths within a state. For example, studies have shown that the stricter the gun laws, the lower the gun deaths within the state, while the weaker the gun laws, the higher the number of gun deaths. According to CNN news, Mississippi currently leads the US with the weakest gun laws and the highest gun deaths (Tucker, 2022)."),
     tags$li("How is gun violence distributed across all the cities of all the states?"),
