@@ -14,8 +14,10 @@ View(state_deaths)
 state_bar_chart <- state_deaths %>%
   #filter(state == "Washington") %>%
   ggplot(aes(x = state, y = total_state_deaths)) +
-  geom_col(fill = "navy blue") +
+  geom_col(fill = "#0f3057") +
   ylim(0, 6000) + 
   ggtitle("State Death Chart ")
 state_bar_chart
+
+ggsave("chart1_img.png", plot = state_bar_chart)
 

@@ -105,8 +105,8 @@ Summary <- tabPanel(
   "Summary",
   titlePanel("Gun Violence in the United States"),
   h2("Summary"),
-  p("" ),
-  tags$img(src = "https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/gun_violence_image_for_intro.jpg",
+  p("Chart 1" ),
+  tags$img(src = "https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/chart1_img.png",
            style="display: block; margin-left: auto; margin-right: auto; width: 60%"),
 )
 
