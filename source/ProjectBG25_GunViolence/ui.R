@@ -125,11 +125,11 @@ Report <- tabPanel(
   h2("Limitations"),
   p("Some limitations we might face in this project concerns the data that we use. Our data sets only span four years, from 2013-2018. This means that our data set might not reflect the most recent impact of gun violence in different regions in the United States. In addition, the data set might not include or account for every single gun violence incidence and therefore could make our analysis somewhat less accurate. Another way that our project might have limitations is that the data set only includes the 50 states in the United States and District of Columbia, which means that other U.S. territories will not be represented in our analysis. Without these data points, our analysis might create a skewed visualization of gun violence which in turn can affect how people interpret our data."),
   h2("Findings"),
-  p("text here"),
+  p("Investigating how gun violence is geographically distributed across the United States it is important to keep in mind gun ownership and laws according to states. For instance, Alabama has more gun violence in comparison to a state with larger population like New Jersey because a report of gun ownership in America by the Objective Analysis Effective Solutions states that Alabama has a higher portion of the population with gun ownership. Looking further into analyzing the cities by state it is revealed cities have more gun violence than rural areas often and there has been an increase in gun violence over the years."),
   h2("Discussion"),
-  p("text here"),
+  p("Observing gun violence by state it brings to question what kind of laws and policies are currently put into place and how do they differ from other states? As a society this information needs to be brought into the eyes to those in the positions of policymakers in order to stop this trend of gun violence as we have seen the negative implications in our society today. "),
   h2("Conclusions"),
-  p("text here"),
+  p("Gun violence has been on the rise over the years and with no solution in sight as a society we must bring awareness to the policymakers of our nation. It is shown that the states with high rates of gun violence are also states with weaker policies set into place and in order to stop gun violence there must be action taken.  "),
   h2("References"),
   tags$ul(
     tags$li("Ko, James. “Gun Violence Data.” Kaggle, 15 Apr. 2018, https://www.kaggle.com/datasets/jameslko/gun-violence-data?resource=download"),
@@ -138,6 +138,7 @@ Report <- tabPanel(
     tags$li("Woodcome, Tricia, et al. “Gun Violence Disproportionately and Overwhelmingly Hurts Communities of Color.” Center for American Progress, 3 June 2022, https://www.americanprogress.org/article/gun-violence-disproportionately-and-overwhelmingly-hurts-communities-of-color/"),
     tags$li("Rowlands, DW, and Hanna Love. “Mapping Gun Violence: A Closer Look at the Intersection between Place and Gun Homicides in Four Cities.” Brookings, Brookings, 21 Apr. 2022, https://www.brookings.edu/2022/04/21/mapping-gun-violence-a-closer-look-at-the-intersection-between-place-and-gun-homicides-in-four-cities/"),
     tags$li("Tucker, Emma, and Priya Krishnakumar. “States with Weaker Gun Laws Have Higher Rates of Firearm Related Homicides and Suicides, Study Finds.” CNN, Cable News Network, 27 May 2022, https://www.cnn.com/2022/01/20/us/everytown-weak-gun-laws-high-gun-deaths-study/index.html#:~:text=Mississippi%20has%20the%20weakest%20gun,all%20states%2C%20the%20research%20shows"),
+    tags$li("“Gun Ownership in America”. Objective Analysis Effective Solutions, https://www.rand.org/research/gun-policy/gun-ownership.html"),
     tags$li("“U.S. Counties with the Most Gun Deaths.” Background Checks.org, https://backgroundchecks.org/us-counties-with-the-most-gun-deaths.html")
   ),
 )
