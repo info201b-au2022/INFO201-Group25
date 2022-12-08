@@ -25,7 +25,7 @@ Introduction <- tabPanel(
 
 # Chart 1 ----
 Chart1 <- tabPanel(
-  "Chart 1",
+  "Comparison between States",
   titlePanel("Comparison of Gun Violence Deaths between States"),
   sidebarLayout(
     sidebarPanel(
@@ -50,7 +50,7 @@ Chart1 <- tabPanel(
 
 # Chart 2 ----
 Chart2 <- tabPanel(
-  "Chart 2",
+  "Visualization of Cities",
   titlePanel("Gun Violence Deaths by Cities"),
   sidebarLayout(
     sidebarPanel(
@@ -76,7 +76,7 @@ Chart2 <- tabPanel(
 
 # Chart 3 ----
 Chart3 <- tabPanel(
-  "Chart 3",
+  "Geographic Distribution by Year",
   titlePanel("Distribution of Gun Violence Deaths by Year"),
   sidebarLayout(
     sidebarPanel(
@@ -100,6 +100,15 @@ Chart3 <- tabPanel(
   )
 )
 
+#Summary ----
+Summary <- tabPanel(
+  "Summary",
+  titlePanel("Gun Violence in the United States"),
+  h2("Summary"),
+  p("" ),
+  tags$img(src = "https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/gun_violence_image_for_intro.jpg",
+           style="display: block; margin-left: auto; margin-right: auto; width: 60%"),
+)
 
 # Report ----
 Report <- tabPanel(
@@ -208,5 +217,6 @@ ui <- shinyUI(navbarPage(
   Chart1, 
   Chart2,
   Chart3,
+  Summary,
   Report
 ))
