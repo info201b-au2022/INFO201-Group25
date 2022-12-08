@@ -18,10 +18,9 @@ Introduction <- tabPanel(
     tags$li("How is gun violence distributed across all the cities of all the states?"),
     tags$li("How has gun violence changed over time? Has it increased or decreased? Does a certain area in the US have an increase or decrease in gun violence? Is there a trend in gun violence over time?")
   ),
-  h2("Data Analyzed"),
-  p(""),
   h2("Key Findings"),
-  p(""),
+  p("Using the data on gun violence from Kaggle, we found that states that lack gun control do have different rates of gun violence than states that have gun control. gun violence is distributed diversely throughout the states in the US. According to our data and chart 1 and 3, we can see that California State and Texas State have the highest gun violence deaths compared to other areas of the US. The general trend seems to show that gun violence tends to be higher on the East Coast of the US, with the exception of California State on the West Coast. In addition, gun violence deaths seems to cluster around certain large metropolitan areas/cities of the state and is not distributed evenly throughout the state. The occurence of gun violence can come from different factors such as the lack of gun control and even poverty level in each state.
+"),
 )
 
 # Chart 1 ----
@@ -128,13 +127,13 @@ Report <- tabPanel(
   p("Through the visualization and analysis of gun violence data, we can inform and educate people about the consequences of ignorant and unlawful use of guns and firearms. By presenting these data to people living in regions and communities with frequent gun violence occurring, we can help provide them with information to better understand and minimize future incidences of gun violence. Allowing people to view the data for themselves can help reduce misconceptions that hinder our ability, as a nation, to develop effective gun violence prevention efforts."),
   h2("Research Questions"),
   tags$ul(
-    tags$li("How does gun violence deaths compare between different states in the US?"),
+    tags$li(tags$strong("How does gun violence deaths compare between different states in the US?")),
     tags$br(),
     tags$p("Through the question and dataset, we are trying to find out which states are more prone to gun violence. This question is important because it allows us to see which states encounter more violence. Using this data, the government would be able to hone in on certain states in an effort to lower the number of deaths in that state caused by gun violence. By analyzing and interpreting the information produced by this data, people can have a better understanding and be able to gauge the safety of each state. In addition, this analysis and data can aid other research and studies related to gun violence. One way that the analysis of gun violence in each state can aid research progress is by correlating it with gun laws and deaths within a state. For example, studies have shown that the stricter the gun laws, the lower the gun deaths within the state, while the weaker the gun laws, the higher the number of gun deaths. According to CNN news, Mississippi currently leads the US with the weakest gun laws and the highest gun deaths (Tucker, 2022)."),
-    tags$li("How is gun violence distributed across all the cities of all the states?"),
+    tags$li(tags$strong("How is gun violence distributed across all the cities of all the states?")),
     tags$br(),
     tags$p("Through the question and dataset, we are trying to find out which cities are more prone to gun violence. This question is important because it allows us to see which cities encounter more violence. Using this data, the local state government would be able to hone in on certain cities in an effort to lower the number of deaths in that city caused by gun violence and create more localized policies aimed to address the issue. By analyzing the information produced by this data, people can have a better understanding about the frequency of gun violence in their area and pursue measures that can keep them and their local community safe. Similar to how data about gun violence in states can be used to aid research, analysis about gun violence in cities can result in studies such as those reported by backgroundchecks.org. It reports that the city that has the highest mortality rate due to gun violence is St. Louis city, MO, with Hinds County, MS hot on its tail."),
-    tags$li("How has gun violence changed over time? Has it increased or decreased? Does a certain area in the US have an increase or decrease in gun violence? Is there a trend in gun violence over time?"),
+    tags$li(tags$strong("How has gun violence changed over time? Has it increased or decreased? Does a certain area in the US have an increase or decrease in gun violence? Is there a trend in gun violence over time?")),
     tags$br(),
     tags$p("Through this question, we would like to find the trend of gun violence deaths over the years in different regions within the US. This is important because it allows us to see in what direction the US is heading. Depending on the trend shown through our analysis, we would be able to shed light on the severity of the gun violence situation and potentially the overall direction gun violence is moving in."),
   ),
@@ -147,14 +146,17 @@ Report <- tabPanel(
   h2("Limitations"),
   p("Some limitations we might face in this project concerns the data that we use. Our data sets only span four years, from 2013-2018. This means that our data set might not reflect the most recent impact of gun violence in different regions in the United States. In addition, the data set might not include or account for every single gun violence incidence and therefore could make our analysis somewhat less accurate. Another way that our project might have limitations is that the data set only includes the 50 states in the United States and District of Columbia, which means that other U.S. territories will not be represented in our analysis. Without these data points, our analysis might create a skewed visualization of gun violence which in turn can affect how people interpret our data."),
   h2("Findings"),
-  p("Findings:
-    How does gun violence deaths compare between different states within the US?
-    Through the dataset and the first chart we created, we can see that gun violence is distributed diversely throughout the states in the US. According to our data and chart 1 and 3, we can see that California State and Texas State have the highest gun violence deaths compared to other areas of the US. The general trend seems to show that gun violence tends to be higher on the East Coast of the US, with the exception of California State on the West Coast. 
-    How is gun violence distributed across all the cities of all the states in the US?
-    Through chart 2, we are able to see the distribution of deaths by gun violence across all the cities within a specific state in the US. After going through a few of the options, we found that the gun violence deaths seems to cluster around certain areas/cities of the state and is not distributed evenly throughout the state. Most states only have a few large clusters of deaths with little ones scattered around like outliers on a scatter plot. 
-    How has gun violence changed over time? Has it increased or decreased? Does a certain area in the US have an increase or decrease in gun violence? Is there a trend in gun violence over time? 
-    Gun violence has increased over time, as we can see through the third chart of our project. All the states seem to have an increase in gun violence and the East Coast of the US seemed to have a more significant increase compared to the West Coast. Once again, the only exception is California. Out of all the States, Texas and Florida seem to have increased the most over the years as can be seen through the color change in our third chart. These three states are all a bright red meaning they hold the highest gun violence deaths out of all the other states in the US. 
-  "),
+  tags$ul(
+    tags$li(tags$strong("How does gun violence deaths compare between different states in the US?")),
+    tags$br(),
+    tags$p("Through the dataset and the first chart we created, we can see that gun violence is distributed diversely throughout the states in the US. According to our data and chart 1 and 3, we can see that California State and Texas State have the highest gun violence deaths compared to other areas of the US. The general trend seems to show that gun violence tends to be higher on the East Coast of the US, with the exception of California State on the West Coast. "),
+    tags$li(tags$strong("How is gun violence distributed across all the cities of all the states?")),
+    tags$br(),
+    tags$p("Through chart 2, we are able to see the distribution of deaths by gun violence across all the cities within a specific state in the US. After going through a few of the options, we found that the gun violence deaths seems to cluster around certain areas/cities of the state and is not distributed evenly throughout the state. Most states only have a few large clusters of deaths with little ones scattered around like outliers on a scatter plot."),
+    tags$li(tags$strong("How has gun violence changed over time? Has it increased or decreased? Does a certain area in the US have an increase or decrease in gun violence? Is there a trend in gun violence over time?")),
+    tags$br(),
+    tags$p("Gun violence has increased over time, as we can see through the third chart of our project. All the states seem to have an increase in gun violence and the East Coast of the US seemed to have a more significant increase compared to the West Coast. Once again, the only exception is California. Out of all the States, Texas and Florida seem to have increased the most over the years as can be seen through the color change in our third chart. These three states are all a bright red meaning they hold the highest gun violence deaths out of all the other states in the US. "),
+  ),
   h2("Discussion"),
   p("Observing gun violence by state it brings to question what kind of laws and policies are currently put into place and how do they differ from other states? As a society this information needs to be brought into the eyes to those in the positions of policymakers in order to stop this trend of gun violence as we have seen the negative implications in our society today. "),
   h2("Conclusions"),
