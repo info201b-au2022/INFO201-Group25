@@ -203,7 +203,7 @@ ui <- shinyUI(navbarPage(
       
     ))
   ),
-  "CO2 Emissions",
+  "Gun Violence Visualization",
   Introduction,
   Chart1, 
   Chart2,
