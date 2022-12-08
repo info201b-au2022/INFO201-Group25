@@ -7,7 +7,7 @@ Introduction <- tabPanel(
   "Introduction",
   titlePanel("Gun Violence in the United States"),
   p("In this project, we will examine the distribution of gun violence – including “homicide, violent crime, attempted suicide, suicide, and unintentional death and injury” (AAFP, 2018) across the United States geographically in terms of state, city, and date. Gun violence threatens the health and safety of all Americans: “Every day in the United States, 93 people die from gunshot wounds and an additional 240 sustain gunshot injuries”. Therefore, this is an extremely important issue to all Americans, and so, through this project, we hope to break things down to better understand which locations within the US are more severely affected by gun violence. There is no solution to this problem yet, so we would like to shed some light on the severity of the gun violence situation within the US." ),
-  tags$img(src = 'https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/gun_violence_image_for_intro.jpg', align = 'left')
+  tags$img(src = 'https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/gun_violence_image_for_intro.jpg', align = 'center', width = '75%', height = 'auto' )
 )
 
 # Chart 1 ----
@@ -90,6 +90,12 @@ Chart3 <- tabPanel(
 Report <- tabPanel(
   "Report",
   titlePanel("Gun Violence in the United States (2013-2018)"),
+  p(tags$strong("Project Code Name:"), "De Fab",),
+  p(tags$strong("Author:"), "Delaney Wu (delaneyw@uw.edu),  Bich Ngoc (Jada) Nguyen (bndn13@uw.edu), Felix Ung (felixung@uw.edu), Anna Voloshina (aev01@uw.edu)"),
+  p("INFO-201: Technical Foundations of Informatics"),
+  p("The Information School"),
+  p("University of Washington"),
+  p("Autumn 2022"),
   h2("Abstract"),
   p("Our main question is: “How is gun violence distributed throughout the United States?” This question is important because it allows us to see what locations are most affected by gun violence. To address this question, we will compare the deaths of individuals in different states, cities, and the overall trend throughout the years."),
   h2("Problem Domain"),
