@@ -105,9 +105,30 @@ Summary <- tabPanel(
   "Summary",
   titlePanel("Gun Violence in the United States"),
   h2("Summary"),
-  p("Chart 1" ),
-  tags$img(src = "https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/chart1_img.png",
-           style="display: block; margin-left: auto; margin-right: auto; width: 60%"),
+  
+  tags$table(
+    tags$tr(
+      tags$td( 
+        h3("Chart 1: Comparison between States"),
+        p("User can select state(s) and compare the deaths caused by gun violence between the states. States with higher population like California tend to have more deaths and state with lack of gun restrictions such as Texas also tend to have more deaths by gun violence.")),
+      tags$td( tags$img(src = "https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/chart1_img.png",
+                         style="display: block; margin-left: auto; margin-right: auto; width: 60%"))
+    ),
+    tags$tr(
+      tags$td( 
+        h3("Chart 2: Visualization of Cities"),
+        p("User can select a certain state and see details as to what cities are more prone to have gun violence deaths. We saw that large metropolitan areas and cities tend to have more cluster of deaths and that they are usually located near interstates and highways.")),
+      tags$td( tags$img(src = "https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/chart2_img.png",
+                        style="display: block; margin-left: auto; margin-right: auto; width: 60%"))
+    ),
+    tags$tr(
+      tags$td( 
+        h3("Chart 3: Geographic Distribution by Year"),
+        p("Users can select to view the year and analyze the trends of gun violence deaths across the US states in that specific year. Our findings shows that the East Coast and Southern regions of the US are more vulnerable to gun violence.")),
+      tags$td( tags$img(src = "https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/chart3_img.png",
+                        style="display: block; margin-left: auto; margin-right: auto; width: 60%"))
+    )
+  )
 )
 
 # Report ----
