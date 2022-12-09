@@ -12,7 +12,7 @@ library(dplyr)
 library(ggplot2)
 library(leaflet)
 library(mapdata)
-#library(mapproj)
+library(mapproj)
 
 geographics <- read.csv("https://raw.githubusercontent.com/info201b-au2022/INFO201-Group25/main/data/geographics.csv")
 

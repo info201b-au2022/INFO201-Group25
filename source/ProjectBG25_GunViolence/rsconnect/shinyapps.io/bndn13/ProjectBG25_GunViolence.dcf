@@ -5,9 +5,9 @@ account: bndn13
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7835285
-bundleId: 6612710
+bundleId: 6613364
 url: https://bndn13.shinyapps.io/ProjectBG25_GunViolence/
-when: 1670535883.994
-lastSyncTime: 1670535883.99403
+when: 1670547854.17064
+lastSyncTime: 1670547854.17066
 asMultiple: FALSE
 asStatic: FALSE
